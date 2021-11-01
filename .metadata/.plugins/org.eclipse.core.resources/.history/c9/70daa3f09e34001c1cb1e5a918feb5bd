@@ -1,0 +1,45 @@
+package JavaBasics;
+
+import java.util.Scanner;
+
+
+
+public class Practice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String a="abcd#@1234";
+		String b="cbad#1234@";
+		
+		boolean isAnagram=true;
+				
+		int al[]=new int[256];
+		
+		for(char c:a.toCharArray())
+		{
+			int index=(int)c;
+			al[index]++;
+			
+		}
+		for(char c: b.toCharArray())
+		{
+			int index=(int)c;
+			al[index]--;
+		}
+		
+		
+		for(int x:al)
+		{
+			if(x!=0)
+			{
+				isAnagram=false;
+			}
+		}
+		if(isAnagram)
+			System.out.println("Anagram");
+		else
+			System.out.println("Not anagram");
+	}
+
+}

@@ -1,0 +1,19 @@
+package JavaBasics;
+
+import java.util.Scanner;
+
+public class Practice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String a="abc";
+		String b="cba";
+		
+		boolean visited[]=new boolean[a.length()];
+		
+		for(boolean x: visited)
+			System.out.println(x);
+	}
+
+}

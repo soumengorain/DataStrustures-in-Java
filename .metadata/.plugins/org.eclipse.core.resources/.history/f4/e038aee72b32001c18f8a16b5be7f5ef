@@ -1,0 +1,30 @@
+package JavaBasics;
+
+import java.util.Scanner;
+
+public class Practice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter the N * N Dimensions");
+		int num=sc.nextInt();
+		
+		for(int i=1;i<=num;i++)
+		{
+			for(int j=1;j<=num-i;j++)
+			{
+				System.out.print("  ");
+				
+			}
+			int n=i;
+			for(int k=1;k<=n;k++)
+				System.out.print(n +"  ");
+			System.out.println();
+		}
+		
+	}
+
+}

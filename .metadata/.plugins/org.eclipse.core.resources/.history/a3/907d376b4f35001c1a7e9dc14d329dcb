@@ -1,0 +1,41 @@
+package JavaBasics;
+
+public class Reverse {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String S="Hi.my.name.is.soumen";
+		String str="";
+        
+
+        
+        int i= S.length()-1;
+        int j;
+        while(i>=0)
+        {
+           
+            if(i<0)
+                break;
+            while(i>=0 && S.charAt(i)=='.')
+            {
+                i--;
+            }
+              j=i;   
+            while(i>=0 && S.charAt(i)!='.')
+            {
+                
+                i--;
+            }
+            if(str.isEmpty())
+            {
+                str=str.concat(S.substring(i+1,j+1));
+            }
+            else
+            {
+                str=str.concat("."+S.substring(i+1,j+1));
+            }
+        }
+	}
+
+}

@@ -1,0 +1,39 @@
+package JavaBasics;
+
+import java.util.Arrays;
+
+public class TwoPointer {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int arr[]= {-3,-1,0,4,6,7};
+		
+		Arrays.sort(arr);
+		
+		for(int i=0;i<arr.length-2;i++)
+		{
+			if(twoSum(arr,arr[i],i+1))
+				System.out.println("true");
+		}
+		System.out.println("False");
+
+	}
+	
+	static boolean twoSum(int a[],int x,int start)
+	{
+		int j=a.length-1;
+		while(start<j)
+		{
+			if(a[start]+a[j]<x)
+				start++;
+			else if(a[start]+a[j]>x)
+				j--;
+			else
+				return true;
+		}
+		
+		return false;
+	}
+
+}
